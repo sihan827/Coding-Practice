@@ -19,11 +19,12 @@ while low <= high:
         if time + lec > mid:
             time = 0
             cnt += 1
-        time += lectures
+        time += lec
     if time: cnt += 1
     if cnt <= M:
+        ans = mid
         high = mid - 1
     else:
         low = mid + 1
 
-print(low)
+print(ans)
